@@ -1,0 +1,7 @@
+name: FLauncherPlugin
+version: ${project.version}
+main: com.github.lkapitman.FLauncherPlugin
+commands:
+  flauncher:
+    description: "Server Only plugin."
+    usage: "/flauncher <login/add> <password> <password>"
