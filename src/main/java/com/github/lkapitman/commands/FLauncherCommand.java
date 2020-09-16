@@ -1,5 +1,6 @@
 package com.github.lkapitman.commands;
 
+import com.github.lkapitman.utils.Connector;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

@@ -1,17 +1,11 @@
 package com.github.lkapitman.utils;
 
-public enum ReturnValues {
+public class ReturnValues {
     // TODO: Return Values for Launcher;
 
-    SUCCESS_OK {
-        String value = "success_ok";
-    },
+    public String SUCCESS_OK = "success_ok";
 
-    SUCCESS_DENIED {
-        String value = "success_denied";
-    },
+    public String SUCCESS_DENIED = "success_denied";
 
-    ACCOUNT_HAS {
-        String value = "account_has";
-    }
+    public String ACCOUNT_EXIST = "account_exist";
 }

@@ -13,6 +13,8 @@ public class Connector {
     private static BufferedReader in;
     private static BufferedWriter out;
     private static FLauncherPlugin plugin = new FLauncherPlugin();
+    private String word;
+
     public void connect() {
         try {
             try {
@@ -22,7 +24,7 @@ public class Connector {
                 in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                 out = new BufferedWriter(new OutputStreamWriter(clientSocket.getOutputStream()));
 
-                String word = reader.readLine();
+                word = reader.readLine();
                 // Значение которое возвращается
                 out.write(word + "\n");
                 //
@@ -38,5 +40,9 @@ public class Connector {
             System.err.println(e);
         }
 
+    }
+
+    public void setWord(String word) {
+        this.word = word;
     }
 }
