@@ -13,6 +13,8 @@ public class FLauncherCommand implements CommandExecutor {
     private String username;
     private String rePassword;
     private String IPAdress;
+    private boolean isLogin;
+    private boolean isRegister;
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -52,7 +54,7 @@ public class FLauncherCommand implements CommandExecutor {
                 password = args[2];
                 rePassword = args[3];
                 IPAdress = args[4];
-
+                isRegister = true;
                 return true;
             }
 
@@ -72,7 +74,7 @@ public class FLauncherCommand implements CommandExecutor {
                 username = args[1];
                 password = args[2];
                 IPAdress = args[3];
-
+                isLogin = true;
                 return true;
             }
 
@@ -135,5 +137,14 @@ public class FLauncherCommand implements CommandExecutor {
         } else {
             return true;
         }
+
+    }
+
+    public boolean isLogin() {
+        return isLogin;
+    }
+
+    public boolean isRegister() {
+        return isRegister;
     }
 }
